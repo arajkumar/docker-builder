@@ -10,11 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Invoke candidate repo entry script
-      run: |
-        wget https://github.com/arajkumar/f8a-server-backbone/archive/v2_changes.zip -O changes.zip
-        unzip changes.zip -d changes
-        mv changes/* .
+      with:
+        repository: https://github.com/arajkumar/f8a-server-backbone.git 
+        ref: v2_changes
  #   - name: Push to GitHub Packages
  #     uses: docker/build-push-action@v1
  #     with:
