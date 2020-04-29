@@ -9,10 +9,11 @@ jobs:
   push_to_registry:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
       with:
         repository: arajkumar/f8a-server-backbone
         ref: v2_changes
+    - run: ls -lh
  #   - name: Push to GitHub Packages
  #     uses: docker/build-push-action@v1
  #     with:
