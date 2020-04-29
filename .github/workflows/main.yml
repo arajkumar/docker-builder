@@ -12,7 +12,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: Invoke candidate repo entry script
       run: |
-        echo "FROM alpine:latest" > Dockerfile
+        wget https://github.com/arajkumar/f8a-server-backbone/archive/v2_changes.zip -O changes.zip
+        unzip changes.zip -d changes
+        mv changes/* .
  #   - name: Push to GitHub Packages
  #     uses: docker/build-push-action@v1
  #     with:
@@ -26,5 +28,5 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: ararunprasad/my-docker-hub-repository
+        repository: ararunprasad/backbone_v2_gh
         tag_with_ref: true
