@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
       with:
-        repository: https://github.com/arajkumar/f8a-server-backbone.git 
+        repository: arajkumar/f8a-server-backbone
         ref: v2_changes
  #   - name: Push to GitHub Packages
  #     uses: docker/build-push-action@v1
