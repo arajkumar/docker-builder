@@ -21,3 +21,5 @@ jobs:
         registry: docker.pkg.github.com
         repository: arajkumar/docker-builder/latest
         tag_with_ref: true
+    - name: Docker pull
+      run: docker pull docker.pkg.github.com/arajkumar/docker-builder/latest:latest
