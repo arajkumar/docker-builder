@@ -11,8 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: arajkumar/f8a-server-backbone
-        ref: v2_changes
+        repository: fabric8-analytics/fabric8-analytics-server
+        ref: master
     - run: ls -lh
  #   - name: Push to GitHub Packages
  #     uses: docker/build-push-action@v1
